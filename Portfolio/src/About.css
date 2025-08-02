@@ -1,23 +1,29 @@
-/* About.css */
+/* About.css – Enhanced and Elegant */
 
 .about-section {
-  background: #ffffff; /* clean white background */
-  color: #1e293b; /* dark navy text for good contrast */
+  background-color: #f8fafc; /* subtle off-white for warmth */
+  color: #1e293b;
   padding: 6rem 2rem;
   text-align: center;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  transition: background 0.3s ease;
 }
 
 .container {
-  max-width: 700px;
+  max-width: 720px;
   margin: 0 auto;
   animation: fadeInUp 1s ease forwards;
   opacity: 0;
-  transform: translateY(20px);
+  transform: translateY(30px);
   animation-delay: 0.3s;
   animation-fill-mode: forwards;
+  border-radius: 12px;
+  background-color: #ffffff;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  padding: 2.5rem;
 }
 
+/* Animation */
 @keyframes fadeInUp {
   to {
     opacity: 1;
@@ -25,24 +31,29 @@
   }
 }
 
+/* Heading Style */
 .about-section h2 {
-  font-size: 2.4rem;
+  font-size: 2.6rem;
   margin-bottom: 1.5rem;
   background: linear-gradient(90deg, #2563eb, #4ade80);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-weight: 700;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  line-height: 1.3;
 }
 
+/* Paragraph Style */
 .about-section p {
-  font-size: 1.1rem;
-  line-height: 1.8;
-  color: #334155; /* softer slate blue */
+  font-size: 1.125rem;
+  line-height: 1.9;
+  color: #475569; /* slightly softer slate */
   margin-bottom: 0;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.03em;
+  padding: 0 1rem;
 }
 
-/* Responsive */
+/* Responsive Design */
 @media (max-width: 768px) {
   .about-section {
     padding: 4rem 1rem;
@@ -54,5 +65,10 @@
 
   .about-section p {
     font-size: 1rem;
+    padding: 0;
+  }
+
+  .container {
+    padding: 2rem 1rem;
   }
 }

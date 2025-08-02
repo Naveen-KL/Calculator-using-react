@@ -1,93 +1,121 @@
-/* Projects.css */
-
+/* 📁 Projects Section */
 .projects-section {
-  background: #ffffff;
+  background: linear-gradient(120deg, #ffffff, #f1f5f9);
   padding: 6rem 2rem;
-  text-align: center;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: #1e293b;
+  text-align: center;
+  overflow: hidden;
 }
 
+/* 🔳 Container */
 .container {
   max-width: 1000px;
   margin: 0 auto;
 }
 
+/* 🏷️ Section Heading */
 .projects-section h2 {
-  font-size: 2.8rem;
+  font-size: 3rem;
   margin-bottom: 2.5rem;
   background: linear-gradient(90deg, #2563eb, #4ade80);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-weight: 700;
+  font-weight: 800;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  animation: fadeInUp 1s ease forwards;
 }
 
+/* 🧱 Grid Layout */
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 2rem;
+  gap: 2.5rem;
 }
 
+/* 📦 Project Card */
 .project-card {
-  background: #f5f7fa;
-  border-radius: 15px;
-  padding: 2rem 1.5rem;
-  box-shadow: 0 12px 20px rgba(37, 99, 235, 0.12);
+  background: #f9fafb;
+  border-radius: 20px;
+  padding: 2.2rem 1.8rem;
+  box-shadow:
+    0 12px 20px rgba(37, 99, 235, 0.1),
+    0 6px 12px rgba(0, 0, 0, 0.04);
   text-decoration: none;
   color: inherit;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: all 0.4s ease;
   opacity: 0;
-  animation: fadeUp 0.6s forwards;
+  animation: fadeUp 0.6s ease forwards;
+}
+
+.project-card:nth-child(odd) {
+  animation-delay: 0.2s;
+}
+
+.project-card:nth-child(even) {
+  animation-delay: 0.4s;
 }
 
 .project-card:hover {
   transform: translateY(-10px) scale(1.03);
-  box-shadow: 0 20px 30px rgba(37, 99, 235, 0.25);
+  box-shadow: 0 24px 35px rgba(37, 99, 235, 0.2);
   cursor: pointer;
 }
 
+/* 🧠 Title */
 .project-card h3 {
-  font-size: 1.8rem;
+  font-size: 2rem;
   margin-bottom: 0.8rem;
   color: #2563eb;
+  font-weight: 700;
 }
 
+/* ✍️ Description */
 .project-card p {
   flex-grow: 1;
-  font-size: 1rem;
+  font-size: 1.05rem;
   color: #475569;
   margin-bottom: 1.5rem;
-  line-height: 1.5;
+  line-height: 1.7;
 }
 
+/* 🧪 Technology Tag */
 .project-card .tech {
-  font-weight: 600;
   font-size: 0.9rem;
+  font-weight: 600;
   color: #4ade80;
-  margin-bottom: 1.8rem;
+  background: rgba(74, 222, 128, 0.15);
+  padding: 0.3rem 0.8rem;
+  border-radius: 12px;
   display: inline-block;
+  margin-bottom: 1.5rem;
 }
 
+/* 👁️ View Button */
 .view-btn {
-  align-self: center;
   background: linear-gradient(90deg, #2563eb, #4ade80);
   color: white;
   border: none;
-  padding: 0.7rem 1.8rem;
-  font-size: 1rem;
-  border-radius: 30px;
-  box-shadow: 0 6px 15px rgba(37, 99, 235, 0.3);
-  transition: background 0.4s ease;
+  padding: 0.9rem 2.2rem;
+  font-size: 1.1rem;
+  border-radius: 50px;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+  box-shadow: 0 8px 18px rgba(37, 99, 235, 0.35);
+  transition: all 0.3s ease;
+  animation: pulseGlow 2s ease-in-out infinite;
 }
 
 .view-btn:hover {
   background: linear-gradient(90deg, #4ade80, #2563eb);
-  cursor: pointer;
+  transform: scale(1.05);
 }
 
+/* 🌀 Animations */
 @keyframes fadeUp {
   from {
     opacity: 0;
@@ -99,21 +127,38 @@
   }
 }
 
-/* Responsive */
+@keyframes pulseGlow {
+  0% {
+    box-shadow: 0 0 0 rgba(74, 222, 128, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(74, 222, 128, 0.6);
+  }
+  100% {
+    box-shadow: 0 0 0 rgba(74, 222, 128, 0.4);
+  }
+}
+
+/* 📱 Responsive Adjustments */
 @media (max-width: 768px) {
   .projects-section {
     padding: 4rem 1rem;
   }
 
   .projects-section h2 {
-    font-size: 2.2rem;
+    font-size: 2.4rem;
   }
 
   .project-card {
-    padding: 1.5rem 1rem;
+    padding: 1.5rem 1.2rem;
   }
 
   .project-card h3 {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
+  }
+
+  .view-btn {
+    font-size: 1rem;
+    padding: 0.7rem 1.6rem;
   }
 }

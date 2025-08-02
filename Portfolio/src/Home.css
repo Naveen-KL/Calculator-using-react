@@ -3,49 +3,59 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #f5f7fa; /* Light grayish-blue background */
-  color: #1e293b; /* Dark navy text */
+  background: linear-gradient(135deg, #f5f7fa, #e5eaf1);
   padding: 2rem;
   text-align: center;
-  animation: fadeIn 1s ease-in;
+  animation: fadeInUp 1s ease forwards;
 }
 
 .home h1 {
-  font-size: 2.8rem;
-  margin-bottom: 0.5rem;
-  color: #0f172a; /* Even darker for headline */
+  font-size: 3rem;
+  margin-bottom: 0.75rem;
+  color: #0f172a;
+  font-weight: 900;
+  letter-spacing: 1px;
 }
 
 .home h2 {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   margin-bottom: 1.2rem;
-  color: #334155; /* Medium dark slate */
+  color: #334155;
+  font-weight: 600;
 }
 
 .home p {
-  font-size: 1rem;
-  color: #475569; /* Soft dark slate */
-  margin-bottom: 2rem;
-  line-height: 1.6;
+  font-size: 1.1rem;
+  color: #475569;
+  margin-bottom: 2.5rem;
+  line-height: 1.75;
+  max-width: 640px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .gradient-text {
-  background: linear-gradient(to right, #2563eb, #4ade80); /* Blue to green gradient */
+  background: linear-gradient(to right, #2563eb, #4ade80);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  font-weight: 700;
 }
 
 .cta-btn {
   display: inline-block;
-  padding: 0.75rem 1.5rem;
-  font-size: 1rem;
-  background: #2563eb; /* Bright blue button */
+  padding: 0.9rem 2rem;
+  font-size: 1.1rem;
+  background: linear-gradient(135deg, #2563eb, #4ade80);
   color: #fff;
-  border-radius: 5px;
+  border-radius: 100px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
   text-decoration: none;
-  transition: background 0.3s ease;
+  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.3);
+  animation: pulseGlow 2s infinite;
+  transition: all 0.3s ease;
 }
 
 .cta-btn:hover {
-  background: #4ade80; /* Bright green hover */
+  transform: scale(1.05);
 }
